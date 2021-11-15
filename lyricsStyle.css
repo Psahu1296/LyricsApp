@@ -28,7 +28,7 @@ body {
     background-position: center;
     background-size: cover;
     position: relative;
-    /* clip-path: polygon(2% 11%, 3% 7%, 96% 27%, 91% 79%, 10% 93%, 8% 89%); */
+    /* clip-path: polygon(2% 11%, 3% 9%, 96% 27%, 91% 79%, 15% 88%, 8% 89%); */
 }
 .container{
     position: absolute;
@@ -72,4 +72,62 @@ button{
     top: 2px;
     font-weight: 600;
     outline: none;
+}
+button:hover{
+    transform: scale(0.96) ;
+    color: rgb(110, 164, 172);
+    background-color: rgb(110, 34, 107);
+}
+.result{
+    color: white;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    position: relative;
+}
+.song-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.song-list li{
+    margin-bottom: 20px;
+    width: 500px;
+    justify-content: space-evenly;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: overline;
+
+}
+
+.song-list li::after{
+    content: "";
+    position: absolute;
+    right: -20px;
+    left: -20px;
+    bottom: -4px;
+    height: 3px;
+    background: rgb(12, 147, 100);
+    display: inline-block;
+}
+
+.song-list li div{
+    float: left;
+}
+.song-list li span{
+    float: right;
+    background-color: #9E2092;
+    border: none;
+    font-size: 12px;
+    border-radius: 12px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 4px 10px;
+    text-transform: capitalize;
 }
