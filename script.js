@@ -47,3 +47,32 @@ function showData(data){
         }
 </ul>`
 }
+
+// event listener in get lyrics button
+
+result.addEventListener('click', e=>{
+    const clickedEliment =e.target;
+
+    // checking clicked button is 
+    if(clickedEliment.tagName === 'SPAN'){
+        const artist = clickedEliment.getAttribute('data-artist');
+        const songTitle = clickedEliment.getAttribute('data-songtitle');
+
+        getLyrics(artist,songTitle);
+    }
+});
+
+// get lyrics
+
+async function getLyrics(artist, songTitle){
+    const res = await fetch(`${apiURL}/v1/${artist}/${songTitle}`);
+    const data = await res.json();
+
+    const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
+
+    result.innerHTML = `<h2><strong>
+                            ${artist}
+                            </strong> -${songTitle}
+                        </h2>
+                        <p>${lyrics}</p>`
+}
