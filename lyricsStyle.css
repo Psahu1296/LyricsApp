@@ -44,19 +44,26 @@ body {
 .container{
     position: absolute;
     color: white;
+    display: flex;
+    flex-wrap: wrap;
     font-size: 22px;
     top: 20%;
     left: 70%;
     transform: translate(-50%,-50% );
 }
 .container h1{
+    position: absolute;
+    top: 0;
+    left: 100px;
     margin-bottom: 50px;
     letter-spacing: 2px;
     text-align: center;
 }
 form{
     position: relative;
+    top: 80px;
     display: flex;
+    flex-wrap: wrap;
     width: 500px;
 
 }
