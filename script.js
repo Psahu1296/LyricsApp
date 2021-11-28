@@ -3,6 +3,7 @@ const search  = document.getElementById('search');
 const result  = document.getElementById('result');
 
 const apiURL ='https://api.lyrics.ovh';
+const apiURL1 ='https://www.lyrics.com/lyric/';
 
 // add even listener in form
 
